@@ -41,4 +41,17 @@ export default function App() {
         Checkout my favorite Games. Select a genre to get started{" "}
       </p>
 
-      <div></div>
+      <div>
+          {Object.keys(gameDB).map((genre) => (
+          <button
+            onClick={() => genreClickHandler(genre)}
+            style={{
+              cursor: "pointer",
+              background: "#E5E7EB",
+              borderRadius: "0.5rem",
+              padding: "0.5rem  1rem",
+              border: "1px solid black",
+              margin: "1rem 0.3rem"
+            }}
+          ></button>
+      
