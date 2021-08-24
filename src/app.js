@@ -29,37 +29,57 @@ const gameDB = {
   ],
 };
 export default function App() {
-  const [selectedGenre, setGenre] = useState("Adventure");
+  const [selectedGenre, setGenre] = useState('Adventure');
   function genreClickHandler(genre) {
     setGenre(genre);
   }
   return (
     <div className="App">
       <h1> 🎮 Games Recommendation </h1>
-      <p style={{ fontSize: "smaller" }}>
-        {" "}
-        Checkout my favorite Games. Select a genre to get started{" "}
+      <p style={{ fontSize: 'smaller' }}>
+        {' '}
+        Checkout my favorite Games. Select a genre to get started{' '}
       </p>
 
       <div>
-          {Object.keys(gameDB).map((genre) => (
+        {Object.keys(gameDB).map((genre) => (
           <button
             onClick={() => genreClickHandler(genre)}
             style={{
-              cursor: "pointer",
-              background: "#E5E7EB",
-              borderRadius: "0.5rem",
-              padding: "0.5rem  1rem",
-              border: "1px solid black",
-              margin: "1rem 0.3rem"
+              cursor: 'pointer',
+              background: '#E5E7EB',
+              borderRadius: '0.5rem',
+              padding: '0.5rem  1rem',
+              border: '1px solid black',
+              margin: '1rem 0.3rem',
             }}
           >
-              {genre}
+            {genre}
           </button>
         ))}
       </div>
       <hr />
-      <div style={{ textAlign: "left" }}>
-        <ul style={{ paddingInlineStart: "0" }}>
+      <div style={{ textAlign: 'left' }}>
+        <ul style={{ paddingInlineStart: '0' }}>
           {gameDB[selectedGenre].map((game) => (
-      
+            <li
+              key={game.name}
+              style={{
+                listStyle: 'none',
+                padding: '1rem',
+                border: '1px solid #D1D5DB',
+                width: '70%',
+                margin: '1rem 0rem',
+                borderRadius: '0.5rem',
+              }}
+            >
+              {' '}
+              <div style={{ fontSize: 'larger' }}> {game.name} </div>
+              <div style={{ fontSize: 'smaller' }}> {game.rating} </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
