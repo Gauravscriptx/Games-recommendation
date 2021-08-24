@@ -7,3 +7,13 @@ const gameDB = {
     { name: "SimCity", rating: "4/5" },
     { name: "Tamagotchi ", rating: "3.5/5" }
   ],
+   Action: [
+    {
+      name: "Donkey Kong",
+      rating: "5/5"
+    },
+    {
+      name: "Galaga",
+      rating: "4.5/5"
+    }
+  ],
