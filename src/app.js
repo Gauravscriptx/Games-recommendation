@@ -53,5 +53,13 @@ export default function App() {
               border: "1px solid black",
               margin: "1rem 0.3rem"
             }}
-          ></button>
+          >
+              {genre}
+          </button>
+        ))}
+      </div>
+      <hr />
+      <div style={{ textAlign: "left" }}>
+        <ul style={{ paddingInlineStart: "0" }}>
+          {gameDB[selectedGenre].map((game) => (
       
