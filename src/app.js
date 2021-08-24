@@ -28,3 +28,8 @@ const gameDB = {
     },
   ],
 };
+export default function App() {
+  const [selectedGenre, setGenre] = useState("Adventure");
+  function genreClickHandler(genre) {
+    setGenre(genre);
+  }
