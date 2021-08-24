@@ -33,3 +33,12 @@ export default function App() {
   function genreClickHandler(genre) {
     setGenre(genre);
   }
+  return (
+    <div className="App">
+      <h1> 🎮 Games Recommendation </h1>
+      <p style={{ fontSize: "smaller" }}>
+        {" "}
+        Checkout my favorite Games. Select a genre to get started{" "}
+      </p>
+
+      <div></div>
